@@ -17,6 +17,6 @@ fi
 
 sed -e 's/[\s]+#.*//1' << EOF | sfdisk /dev/sda
 ,512MiB,ef,*	# Create boot partition type (ef) 'EFI (FAT-12/16/32)' of 512MB size & set it to boot
-,8GiB,82		# Create swap partition type (82) 'Linux swap / Solaris' of 8GB size
-,,83			# Create linux partition type (83) 'Linux' of the remaining hard drive
+,8GiB,82	# Create swap partition type (82) 'Linux swap / Solaris' of 8GB size
+,,83	# Create linux partition type (83) 'Linux' of the remaining hard drive
 EOF
